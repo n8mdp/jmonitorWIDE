@@ -181,7 +181,7 @@ public class ControlPanel extends javax.swing.JPanel {
                 modeButtonActionPerformed(evt);
             }
         });
-        add(modeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 80, 30));
+        add(modeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 0, 80, 30));
 
         vfo.setEditable(false);
         vfo.setBackground(new java.awt.Color(0, 0, 0));
@@ -217,7 +217,7 @@ public class ControlPanel extends javax.swing.JPanel {
                 modeActionPerformed(evt);
             }
         });
-        add(mode, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 60, 80, 50));
+        add(mode, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 60, 80, 50));
 
         javax.swing.GroupLayout digitalMeterLayout = new javax.swing.GroupLayout(digitalMeter);
         digitalMeter.setLayout(digitalMeterLayout);
@@ -242,7 +242,7 @@ public class ControlPanel extends javax.swing.JPanel {
                 filterButtonActionPerformed(evt);
             }
         });
-        add(filterButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, 80, 30));
+        add(filterButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 0, 90, 30));
 
         agcButton.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
         agcButton.setText("AGC");
@@ -254,7 +254,7 @@ public class ControlPanel extends javax.swing.JPanel {
                 agcButtonActionPerformed(evt);
             }
         });
-        add(agcButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, 80, 30));
+        add(agcButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 30, 80, 30));
 
         dspButton.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
         dspButton.setText("DSP");
@@ -266,7 +266,7 @@ public class ControlPanel extends javax.swing.JPanel {
                 dspButtonActionPerformed(evt);
             }
         });
-        add(dspButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 80, 30));
+        add(dspButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, 80, 30));
 
         afgainButton.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
         afgainButton.setText("AF Gain");
@@ -278,7 +278,7 @@ public class ControlPanel extends javax.swing.JPanel {
                 afgainButtonActionPerformed(evt);
             }
         });
-        add(afgainButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 30, 80, 30));
+        add(afgainButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 30, 90, 30));
 
         msID.setEditable(false);
         msID.setBackground(new java.awt.Color(0, 0, 0));
@@ -294,24 +294,24 @@ public class ControlPanel extends javax.swing.JPanel {
         add(msID, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 0, 110, 30));
 
         freqUp.setBackground(new java.awt.Color(255, 255, 255));
-        freqUp.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        freqUp.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         freqUp.setLabel("UP");
         freqUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 freqUpActionPerformed(evt);
             }
         });
-        add(freqUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 50, 40, 30));
+        add(freqUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 50, 40, 30));
 
         freqDown.setBackground(new java.awt.Color(255, 255, 255));
-        freqDown.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        freqDown.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         freqDown.setLabel("DN");
         freqDown.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 freqDownActionPerformed(evt);
             }
         });
-        add(freqDown, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 80, 40, 30));
+        add(freqDown, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 80, 40, 30));
 
         band60Mbutton.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         band60Mbutton.setText("60");
@@ -502,7 +502,7 @@ public class ControlPanel extends javax.swing.JPanel {
                 vfoAtoBActionPerformed(evt);
             }
         });
-        add(vfoAtoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 60, 80, 30));
+        add(vfoAtoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 60, 90, 30));
 
         jTextField3.setBackground(new java.awt.Color(0, 0, 0));
         jTextField3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
