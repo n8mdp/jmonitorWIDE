@@ -101,8 +101,8 @@ public class SpectrumPanel extends javax.swing.JPanel {
     }
 
     private void formMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_formMouseWheelMoved
-        // I don't use this function at this time... JLT 01/20/13
-        client.setFrequency(client.getFrequency()+(evt.getWheelRotation()*100));
+        // Chaned multiplier factr from 100 to 1 to adjust last digit
+        client.setFrequency(client.getFrequency()+(evt.getWheelRotation()*1));
     }//GEN-LAST:event_formMouseWheelMoved
 
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked

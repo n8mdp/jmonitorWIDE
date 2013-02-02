@@ -180,7 +180,8 @@ public class WaterfallPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_formMouseWheelMoved
-        client.setFrequency(client.getFrequency()+(evt.getWheelRotation()*100));
+        //changed multiple factor from 100 to 1 to control last digit
+        client.setFrequency(client.getFrequency()+(evt.getWheelRotation()*1));
     }//GEN-LAST:event_formMouseWheelMoved
 
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked

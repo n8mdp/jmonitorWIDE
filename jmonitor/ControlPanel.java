@@ -17,9 +17,7 @@
  *                  20, 17, 15, 12, 10, 6 Meters, GEN, WWV1, WWV2, WWV3)
  *              2. Eliminated the original Band button to select the band and
  *                  its associated code
- *              3. Enlarged the VFO display
- *              4. Added a second VFO so that you can direct enter a frequency.
- *                  Added the "A>B" button to transfer the frequency.
+ *              3. Enlarged
  * 
  * 1/20/13: Changes:
  *              1. public void updatedVFO ()
@@ -133,11 +131,6 @@ public class ControlPanel extends javax.swing.JPanel {
         WWV2button = new javax.swing.JButton();
         bandGENbutton = new javax.swing.JButton();
         WWV3button = new javax.swing.JButton();
-        inputVFO = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        vfoAtoB = new javax.swing.JButton();
-        jTextField3 = new javax.swing.JTextField();
 
         jButton1.setText("jButton1");
 
@@ -181,9 +174,8 @@ public class ControlPanel extends javax.swing.JPanel {
                 modeButtonActionPerformed(evt);
             }
         });
-        add(modeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 80, 30));
+        add(modeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 90, 30));
 
-        vfo.setEditable(false);
         vfo.setBackground(new java.awt.Color(0, 0, 0));
         vfo.setFont(new java.awt.Font("FreeMono", 1, 48)); // NOI18N
         vfo.setForeground(new java.awt.Color(0, 255, 0));
@@ -203,7 +195,7 @@ public class ControlPanel extends javax.swing.JPanel {
                 vfoActionPerformed(evt);
             }
         });
-        add(vfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 50, 250, 60));
+        add(vfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 30, 250, 80));
 
         mode.setEditable(false);
         mode.setBackground(new java.awt.Color(0, 0, 0));
@@ -217,7 +209,11 @@ public class ControlPanel extends javax.swing.JPanel {
                 modeActionPerformed(evt);
             }
         });
-        add(mode, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 60, 80, 50));
+        add(mode, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 40, 80, 60));
+
+        digitalMeter.setMaximumSize(new java.awt.Dimension(180, 46));
+        digitalMeter.setMinimumSize(new java.awt.Dimension(180, 46));
+        digitalMeter.setPreferredSize(new java.awt.Dimension(180, 46));
 
         javax.swing.GroupLayout digitalMeterLayout = new javax.swing.GroupLayout(digitalMeter);
         digitalMeter.setLayout(digitalMeterLayout);
@@ -230,7 +226,7 @@ public class ControlPanel extends javax.swing.JPanel {
             .addGap(0, 46, Short.MAX_VALUE)
         );
 
-        add(digitalMeter, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, -1, 20));
+        add(digitalMeter, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 0, -1, 30));
 
         filterButton.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
         filterButton.setText("Filter");
@@ -242,7 +238,7 @@ public class ControlPanel extends javax.swing.JPanel {
                 filterButtonActionPerformed(evt);
             }
         });
-        add(filterButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, 80, 30));
+        add(filterButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 90, 30));
 
         agcButton.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
         agcButton.setText("AGC");
@@ -254,7 +250,7 @@ public class ControlPanel extends javax.swing.JPanel {
                 agcButtonActionPerformed(evt);
             }
         });
-        add(agcButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, 80, 30));
+        add(agcButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, -1, 30));
 
         dspButton.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
         dspButton.setText("DSP");
@@ -266,10 +262,10 @@ public class ControlPanel extends javax.swing.JPanel {
                 dspButtonActionPerformed(evt);
             }
         });
-        add(dspButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 80, 30));
+        add(dspButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, 90, 30));
 
         afgainButton.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
-        afgainButton.setText("AF Gain");
+        afgainButton.setText("AFGain");
         afgainButton.setMaximumSize(new java.awt.Dimension(90, 27));
         afgainButton.setMinimumSize(new java.awt.Dimension(90, 27));
         afgainButton.setPreferredSize(new java.awt.Dimension(90, 27));
@@ -278,7 +274,7 @@ public class ControlPanel extends javax.swing.JPanel {
                 afgainButtonActionPerformed(evt);
             }
         });
-        add(afgainButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 30, 80, 30));
+        add(afgainButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, 90, 30));
 
         msID.setEditable(false);
         msID.setBackground(new java.awt.Color(0, 0, 0));
@@ -301,7 +297,7 @@ public class ControlPanel extends javax.swing.JPanel {
                 freqUpActionPerformed(evt);
             }
         });
-        add(freqUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 50, 40, 30));
+        add(freqUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 30, 50, 40));
 
         freqDown.setBackground(new java.awt.Color(255, 255, 255));
         freqDown.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
@@ -311,7 +307,7 @@ public class ControlPanel extends javax.swing.JPanel {
                 freqDownActionPerformed(evt);
             }
         });
-        add(freqDown, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 80, 40, 30));
+        add(freqDown, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 70, 50, 40));
 
         band60Mbutton.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         band60Mbutton.setText("60");
@@ -427,7 +423,7 @@ public class ControlPanel extends javax.swing.JPanel {
                 WWV1buttonActionPerformed(evt);
             }
         });
-        add(WWV1button, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, 80, 30));
+        add(WWV1button, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 80, 30));
 
         WWV2button.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         WWV2button.setText("WWV 2");
@@ -436,7 +432,7 @@ public class ControlPanel extends javax.swing.JPanel {
                 WWV2buttonActionPerformed(evt);
             }
         });
-        add(WWV2button, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 80, 30));
+        add(WWV2button, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 80, 30));
 
         bandGENbutton.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         bandGENbutton.setText("GEN");
@@ -455,62 +451,7 @@ public class ControlPanel extends javax.swing.JPanel {
                 WWV3buttonActionPerformed(evt);
             }
         });
-        add(WWV3button, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, 80, 30));
-
-        inputVFO.setBackground(new java.awt.Color(0, 0, 0));
-        inputVFO.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        inputVFO.setForeground(new java.awt.Color(0, 255, 0));
-        inputVFO.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        inputVFO.setText("7.173000");
-        inputVFO.setToolTipText("");
-        inputVFO.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        inputVFO.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputVFOActionPerformed(evt);
-            }
-        });
-        add(inputVFO, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 20, 140, 30));
-
-        jTextField1.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField1.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 0));
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField1.setText("VFO A");
-        jTextField1.setToolTipText("");
-        jTextField1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, 50, 30));
-
-        jTextField2.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField2.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(0, 255, 0));
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField2.setText("VFO B");
-        jTextField2.setToolTipText("");
-        jTextField2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 70, 50, 30));
-
-        vfoAtoB.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        vfoAtoB.setText("A > B");
-        vfoAtoB.setToolTipText("");
-        vfoAtoB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                vfoAtoBActionPerformed(evt);
-            }
-        });
-        add(vfoAtoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 60, 80, 30));
-
-        jTextField3.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(0, 255, 0));
-        jTextField3.setText("MHz");
-        jTextField3.setToolTipText("");
-        jTextField3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, -1, 30));
+        add(WWV3button, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 60, 80, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void createModeMenu() {
@@ -844,33 +785,6 @@ public class ControlPanel extends javax.swing.JPanel {
     private void modeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_modeActionPerformed
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void vfoAtoBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vfoAtoBActionPerformed
-        // This code takes any input and puts into the proper format as 
-        // long as the frequency entered is in MHz        
-        DecimalFormat df = new DecimalFormat("##0.000000");
-//        String s=inputVFO.getText().replace(".","");
-        String s=inputVFO.getText();
-        double freq = Double.valueOf(s);
-        s = df.format(freq);
-        s = s.replace(".","");
-        try {
-            
-            long f=Long.parseLong(s);
-            client.setFrequency(f);
-        } catch (Exception e) {
-            // force repaint
-            frequency=0L;
-        }
-    }//GEN-LAST:event_vfoAtoBActionPerformed
-
-    private void inputVFOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputVFOActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inputVFOActionPerformed
 
     private void createLSBFilterMenu() {
 
@@ -1758,18 +1672,13 @@ public class ControlPanel extends javax.swing.JPanel {
     private javax.swing.JButton filterButton;
     private java.awt.Button freqDown;
     private java.awt.Button freqUp;
-    private javax.swing.JTextField inputVFO;
     private javax.swing.JButton jButton1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField mode;
     private javax.swing.JButton modeButton;
     public javax.swing.JTextField msID;
     private java.awt.Panel panel1;
     private java.awt.Panel panel2;
     private javax.swing.JTextField vfo;
-    private javax.swing.JButton vfoAtoB;
     // End of variables declaration//GEN-END:variables
 
     private Client client;
