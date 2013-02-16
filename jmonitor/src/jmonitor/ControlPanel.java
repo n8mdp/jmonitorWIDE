@@ -185,9 +185,8 @@ public class ControlPanel extends javax.swing.JPanel {
 
         vfo.setEditable(false);
         vfo.setBackground(new java.awt.Color(0, 0, 0));
-        vfo.setFont(new java.awt.Font("FreeMono", 1, 48)); // NOI18N
+        vfo.setFont(new java.awt.Font("FreeMono", 1, 36)); // NOI18N
         vfo.setForeground(new java.awt.Color(0, 255, 0));
-        vfo.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         vfo.setText("7.048.000");
         vfo.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         vfo.setMaximumSize(new java.awt.Dimension(178, 26));
@@ -420,23 +419,23 @@ public class ControlPanel extends javax.swing.JPanel {
         add(band6Mbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 60, 30));
 
         WWV1button.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        WWV1button.setText("WWV 1");
+        WWV1button.setText("WWV 5");
         WWV1button.setToolTipText("");
         WWV1button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 WWV1buttonActionPerformed(evt);
             }
         });
-        add(WWV1button, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, 80, 30));
+        add(WWV1button, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 90, 30));
 
         WWV2button.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        WWV2button.setText("WWV 2");
+        WWV2button.setText("WWV 10");
         WWV2button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 WWV2buttonActionPerformed(evt);
             }
         });
-        add(WWV2button, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 80, 30));
+        add(WWV2button, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 90, 30));
 
         bandGENbutton.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         bandGENbutton.setText("GEN");
@@ -449,18 +448,17 @@ public class ControlPanel extends javax.swing.JPanel {
         add(bandGENbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, 60, 30));
 
         WWV3button.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        WWV3button.setText("WWV 3");
+        WWV3button.setText("WWV 15");
         WWV3button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 WWV3buttonActionPerformed(evt);
             }
         });
-        add(WWV3button, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, 80, 30));
+        add(WWV3button, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 90, 30));
 
         inputVFO.setBackground(new java.awt.Color(0, 0, 0));
         inputVFO.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         inputVFO.setForeground(new java.awt.Color(0, 255, 0));
-        inputVFO.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         inputVFO.setText("7.173000");
         inputVFO.setToolTipText("");
         inputVFO.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -510,7 +508,7 @@ public class ControlPanel extends javax.swing.JPanel {
         jTextField3.setText("MHz");
         jTextField3.setToolTipText("");
         jTextField3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, -1, 30));
+        add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 20, -1, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void createModeMenu() {
